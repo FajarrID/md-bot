@@ -896,6 +896,41 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 					alpha.sendImage(m.chat, data.url, lang.ok(), m)
 					})
 					break
+
+
+					case 'yurineko':
+						reply(lang.wait())
+						axios.get(`https://wibuteam.herokuapp.com/api/nsfw/yuri?apikey=nobody`)
+						.then(({data}) => {
+							alpha.sendMediaAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
+	
+	
+						})
+						break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 case 'stikerin':case 's': case 'sticker': case 'stiker': {
 if (!quoted) return reply(`Kirim/Reply Gambar/Video Dengan Caption ${prefix + command}\n\nDurasi Sticker Video 1-9 Detik☕`)
 if (/image/.test(mime)) {
