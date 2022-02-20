@@ -902,9 +902,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 						reply(lang.wait())
 						axios.get(`https://wibuteam.herokuapp.com/api/nsfw/yuri?apikey=nobody`)
 						.then(({data}) => {
-							alpha.sendMediaAsSticker(m.chat, data.url, m, { packname: global.packname, author: global.author })
-	
-	
+							alpha.sendImage(m.chat, data.url, lang.ok(), m)
 						})
 						break
 
